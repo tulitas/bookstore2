@@ -1,0 +1,10 @@
+/target/
+# Project files
+target/
+out/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr

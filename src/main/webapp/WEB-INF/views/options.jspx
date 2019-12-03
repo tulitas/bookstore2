@@ -1,0 +1,263 @@
+<!--
+  Created by IntelliJ IDEA.
+  User: SergejK
+  Date: 28-Jul-19
+  Time: 09:06
+  To change this template use File | Settings | File Templates.
+-->
+<!--Vsplivajusee menu-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          >
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+    <jsp:output doctype-root-element="html"
+                doctype-system="about:legacy-compat"
+                omit-xml-declaration="true"/>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+        <style>
+            .navbar {
+                overflow: hidden;
+                background-color: #333;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                cursor: pointer;
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+                background-color: red;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            .show {
+                display: block;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            .remove_button {
+                padding: 10px 15px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #e60000;
+                background-color: #00008B;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+
+            .add_button {
+
+                padding: 15px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #00008B;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+
+            button:hover {
+
+                background-color: #3e8e41;
+            }
+
+            button:active {
+
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+
+            textarea {
+
+                position: absolute;
+                top: 98px;
+                right: 450px;
+
+
+            }
+
+            table {
+                position: absolute;
+                top: 200px;
+                left: 210px;
+            }
+
+
+        </style>
+
+        <title>Title</title>
+    </head>
+    <body>
+
+
+    <a></a><img src="https://www.sherloglatvia.com/wp-content/uploads/2016/06/logo.png" alt="sherlog" width="90" height="50"/>
+
+
+    <br/>
+
+    <div style="float: right">
+        <form action="${pageContext.request.contextPath}/options/create"  method="post">
+            <label for="car">Ievadi A/M marku un numuru</label><br/>
+            <input type="text" name="car" id="car" size="40"/><br/>
+            <br/>
+            <label for="client">Ievadi klientu un tel.</label><br/>
+            <input id="client" type="text" name="client" size="40"/>
+
+            <br/>
+            <br/>
+
+
+            <label for="sistem">Izvelejies sistemu</label>
+            <div><select id="sistem" name="sistem"> size="3" multiple="multiple"
+                <option value="Optimum"/>
+                optimum
+                <option value="mini"/>
+                mini
+                <option value="comfort"/>
+                comfort
+            </select></div>
+            <br/>
+
+            <div><label for="work">Izvelejies darba veidu</label><br/>
+                <select id="work" name="work"> size="3" multiple="multiple"
+                    <option value="Montaz"/>
+                    montaz
+                    <option value="Remont"/>
+                    remont
+                    <option value="Snjatie"/>
+                    snjatie
+                </select></div>
+            <br/>
+
+            <div><label for="manager">Kas veic ierakstu</label><br/>
+                <select id="manager" name="manager"> size="3" multiple="multiple"
+                    <option value="Agnese"/>
+                    Agnese
+                    <option value="Kristine"/>
+                    Kristine
+                    <option value="Aigars"/>
+                    Aigars
+                </select></div>
+
+            <p><label for="date"> Выберите дату: </label><br/>
+                <input id="date" type="date" name="workdate" />
+
+            </p>
+
+            <br/>
+            <br/>
+            <br/>
+            <!--        <input type="submit" value="Pievienot"/>-->
+            <p>
+
+                <button class="add_button"> Pievienot</button>
+            </p>
+
+            <p><label for="info"></label>
+                <textarea style="left: 210px" id="info" cols="60" rows="6" name="info">info</textarea></p>
+        </form>
+
+            <table style="word-wrap: break-word"  border="7">
+                <tr>
+                    <th>Date</th>
+                    <th>Manager</th>
+                    <th>Car</th>
+                    <th>Client</th>
+                    <th>Info</th>
+                    <th>Sistem</th>
+                    <th>Work</th>
+                    <th>Action</th>
+                </tr>
+
+                <c:forEach var="JobForm" items="${optionsList}">
+
+                    <tr>
+                        <td width="75">${JobForm.workdate}</td>
+                        <td width="50">${JobForm.manager}</td>
+                        <td width="50">${JobForm.car}</td>
+                        <td width="50">${JobForm.client}</td>
+                        <td width="50">${JobForm.info}</td>
+                        <td width="50">${JobForm.sistem}</td>
+                        <td width="50">${JobForm.work}</td>
+                        <td width="50"><a href="/options/delete${JobForm.id}">Delete</a></td>
+
+                    </tr>
+                </c:forEach>
+            </table>
+
+    </div>
+    <br/>
+    <div style="height: 200px; width: 100px; border: 3px dashed #e03c32; float: left">
+        <p>
+            <strong><a href="/">Years list</a></strong> <br/>
+            <strong><a href="/year2019">Month list</a></strong><br/>
+            <strong><a href="/statistics">Statistics</a></strong>
+
+        </p>
+    </div>
+
+    </body>
+    </html>
+</jsp:root>
