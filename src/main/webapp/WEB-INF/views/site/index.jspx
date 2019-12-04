@@ -33,12 +33,15 @@
     <td><c:out value="${message}"/></td>
     <table>
         <tr>
-            <th>Year</th>
+            <th>Menu</th>
 
         </tr>
         <tr>
 <!--            ssilka na 2019-->
-            <td><strong><a href="/addNewBook">Add new dook</a></strong></td>
+            <td><strong><a href="/addNewBook">Add New Book</a></strong></td></tr>
+        <tr>
+
+            <td><strong><a href="/bookList">Book List</a></strong></td>
 
         </tr>
 

@@ -151,10 +151,6 @@
     </head>
     <body>
 
-
-    <a></a><img src="https://www.sherloglatvia.com/wp-content/uploads/2016/06/logo.png" alt="sherlog" width="90" height="50"/>
-
-
     <br/>
 
     <div style="float: right">
@@ -167,16 +163,16 @@
             <input id="enterbookname" type="text" name="bookname" size="40"/>
 
             <br/>
-            <label for="enterbooktitle">Enter Book Name</label><br/>
+            <label for="enterbooktitle">Enter Book Title</label><br/>
             <input id="enterbooktitle" type="text" name="booktitle" size="40"/>
             <br/>
 
-            <label for="enterbookpages">Enter Book Name</label><br/>
+            <label for="enterbookpages">Enter Book Pages</label><br/>
             <input id="enterbookpages" type="text" name="bookpages" size="40"/>
             <br/>
 
-            <label for="enterbookprice">Enter Book Name</label><br/>
-            <input id="enterbookprice" type="text" name="bookpice" size="40"/>
+            <label for="enterbookprice">Enter Book Price</label><br/>
+            <input id="enterbookprice" type="text" name="bookprice" size="40"/>
             <br/>
 
 
@@ -203,19 +199,17 @@
                 <button class="add_button">Add Book</button>
             </p>
 
-            <p><label for="info"></label>
-                <textarea style="left: 210px" id="info" cols="60" rows="6" name="info">info</textarea></p>
+
         </form>
 
         <table style="word-wrap: break-word"  border="7">
             <tr>
-                <th>Date</th>
-                <th>Manager</th>
-                <th>Car</th>
-                <th>Client</th>
-                <th>Info</th>
-                <th>Sistem</th>
-                <th>Work</th>
+                <th>Author</th>
+                <th>Book Name</th>
+                <th>Genre</th>
+                <th>Book Title</th>
+                <th>Book Pages</th>
+                <th>Book Price</th>
                 <th>Action</th>
             </tr>
 
@@ -236,11 +230,10 @@
 
     </div>
     <br/>
-    <div style="height: 200px; width: 100px; border: 3px dashed #e03c32; float: left">
+    <div style="height: 200px; width: 120px; border: 3px dashed #e03c32; float: left">
         <p>
-            <strong><a href="/">Years list</a></strong> <br/>
-            <strong><a href="/year2019">Month list</a></strong><br/>
-            <strong><a href="/statistics">Statistics</a></strong>
+            <strong><a href="/">Add New Book</a></strong> <br/>
+            <strong><a href="/bookList">Book List</a></strong> <br/>
 
         </p>
     </div>

@@ -16,7 +16,7 @@ public interface JobformRepository extends CrudRepository<JobForm, Long> {
 //    JobForm findByManager(@Param("manager") String manager);
 
 
-    @Query(value = "select  id, bookauthor, booktitle, bookname, bookgenre, bookpages, bookprice from bookstore ", nativeQuery = true)
+    @Query(value = "select  id, bookauthor, booktitle, bookname, bookgenre, bookpages, bookprice from bookstore order by id desc " , nativeQuery = true)
 List<JobForm> getAllById();
 //    List<JobForm> getAllById(String id);
 
