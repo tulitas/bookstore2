@@ -33,12 +33,12 @@ public class OptionsController {
 
 
     @RequestMapping(value = "/options")
-    public String getAllByWorkdate(Model model, String work_date) {
+    public String getAllById(Model model, String id) {
         System.out.println("CONTR get all by work date");
-        List<JobForm> jobForms = jobformService.getAllByWorkdate(work_date);
+        List<JobForm> jobForms = jobformService.getAllById(id);
         model.addAttribute("optionsList", jobForms);
-        System.out.println(jobForms);
-        return "/options";
+        System.out.println(id);
+        return "/addNewBook";
     }
 
     @RequestMapping(value = "/options/delete{id}", method = RequestMethod.GET)

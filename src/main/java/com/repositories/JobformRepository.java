@@ -16,9 +16,11 @@ public interface JobformRepository extends CrudRepository<JobForm, Long> {
 //    JobForm findByManager(@Param("manager") String manager);
 
 
-//    @Query(value = "select id, car, client, create_date, info, manager, sistem, work, work_date " +
-//            "from jobform where work_date like '2019-11-13'", nativeQuery = true)
-    List<JobForm> getAllByWorkdate(String work_date);
+    @Query(value = "select  id, bookauthor, booktitle, bookname, bookgenre, bookpages, bookprice from bookstore ", nativeQuery = true)
+List<JobForm> getAllById();
+//    List<JobForm> getAllById(String id);
+
+
 
 //    @Query(value = "select work_date from jobform where work_date like '%2019-11%'", nativeQuery = true)
 //    Integer getSatistics();

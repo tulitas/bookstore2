@@ -29,7 +29,7 @@
     </head>
     <body>
 
-    <h2>Years List</h2>
+    <h2>Book Store</h2>
     <td><c:out value="${message}"/></td>
     <table>
         <tr>
@@ -38,29 +38,10 @@
         </tr>
         <tr>
 <!--            ssilka na 2019-->
-            <td><strong><a href="year2019">2019</a></strong></td>
+            <td><strong><a href="/addNewBook">Add new dook</a></strong></td>
 
         </tr>
-        <tr>
-            <td><a href="/years/2020/month2020"/> 2020</td>
 
-        </tr>
-        <tr>
-            <td>2021</td>
-
-        </tr>
-        <tr>
-            <td>2022</td>
-
-        </tr>
-        <tr>
-            <td>2023</td>
-
-        </tr>
-        <tr>
-            <td>2024</td>
-
-        </tr>
     </table>
 
     </body>

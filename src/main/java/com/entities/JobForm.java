@@ -9,124 +9,97 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "JOBFORM")
+@Table(name = "bookstore")
 public class JobForm {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
 
-    @Column(name = "CreateDate")
-    private String createdate;
+    @Column(name = "bookauthor")
+    private String bookauthor;
 
-    @Column(name = "Manager")
-    private String manager;
+    @Column(name = "bookname")
+    private String bookname;
 
-    @Column(name = "Car")
-    private String car;
+    @Column(name = "bookgenre")
+    private String bookgenre;
 
-    @Column(name = "sistem")
-    private String sistem;
+    @Column(name = "booktitle")
+    private String booktitle;
 
-    @Column(name = "Client")
-    private String client;
+    @Column(name = "bookpages")
+    private String bookpages;
 
-    @Column(name = "INFO")
-    private String info;
-
-    @Column(name = "work")
-    private String work;
-
-    @Column(name = "WorkDate")
-    @NotNull
-    private String workdate;
-
-
-
-    public String getCreatedate() {
-        return createdate;
-    }
-
-    public void setCreatedate(String createdate) {
-        this.createdate = createdate;
-    }
+    @Column(name = "bookprice")
+    private String bookprice;
 
     public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getManager() {
-        return manager;
+    public String getBookauthor() {
+        return bookauthor;
     }
 
-    public void setManager(String manager) {
-        this.manager = manager;
+    public void setBookauthor(String bookauthor) {
+        this.bookauthor = bookauthor;
     }
 
-    public String getCar() {
-        return car;
+    public String getBookname() {
+        return bookname;
     }
 
-    public void setCar(String car) {
-        this.car = car;
+    public void setBookname(String bookname) {
+        this.bookname = bookname;
     }
 
-    public String getSistem() {
-        return sistem;
+    public String getBookgenre() {
+        return bookgenre;
     }
 
-    public void setSistem(String sistem) {
-        this.sistem = sistem;
+    public void setBookgenre(String bookgenre) {
+        this.bookgenre = bookgenre;
     }
 
-    public String getClient() {
-        return client;
+    public String getBooktitle() {
+        return booktitle;
     }
 
-    public void setClient(String client) {
-        this.client = client;
+    public void setBooktitle(String booktitle) {
+        this.booktitle = booktitle;
     }
 
-    public String getInfo() {
-        return info;
+    public String getBookpages() {
+        return bookpages;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setBookpages(String bookpages) {
+        this.bookpages = bookpages;
     }
 
-    public String getWork() {
-        return work;
+    public String getBookprice() {
+        return bookprice;
     }
 
-    public void setWork(String work) {
-        this.work = work;
-    }
-
-    public String getWorkdate() {
-        return workdate;
-    }
-
-    public void setWorkdate(String workdate) {
-        this.workdate = workdate;
+    public void setBookprice(String bookprice) {
+        this.bookprice = bookprice;
     }
 
     @Override
     public String toString() {
         return "JobForm{" +
                 "id=" + id +
-                ", createdate='" + createdate + '\'' +
-                ", manager='" + manager + '\'' +
-                ", car='" + car + '\'' +
-                ", sistem='" + sistem + '\'' +
-                ", client='" + client + '\'' +
-                ", info='" + info + '\'' +
-                ", work='" + work + '\'' +
-                ", workdate='" + workdate + '\'' +
+                ", bookauthor='" + bookauthor + '\'' +
+                ", bookname='" + bookname + '\'' +
+                ", bookgenre='" + bookgenre + '\'' +
+                ", booktitle='" + booktitle + '\'' +
+                ", bookpages='" + bookpages + '\'' +
+                ", bookprice='" + bookprice + '\'' +
                 '}';
     }
 }
