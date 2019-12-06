@@ -8,7 +8,7 @@
 <!--Vsplivajusee menu-->
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
           xmlns="http://www.w3.org/1999/xhtml" version="2.0"
-          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:th="http://www.springframework.org/tags/form"
 >
     <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
     <jsp:output doctype-root-element="html"
@@ -150,19 +150,19 @@
         <title>Title</title>
     </head>
     <body>
-
+<style>body {background: #999999}</style>
     <br/>
 
     <div style="float: right">
-        <form action="${pageContext.request.contextPath}/options/create"  method="post">
+        <form action="${pageContext.request.contextPath}/valid" method="post">
             <label for="enterbookauthor">Enter Book Author</label><br/>
             <input type="text" name="bookauthor" id="enterbookauthor" size="40"/><br/>
-            <br/>
-
-            <label for="enterbookname">Enter Book Name</label><br/>
-            <input id="enterbookname" type="text" name="bookname" size="40"/>
 
             <br/>
+                <label for="enterbookname">Enter Book Name</label><br/>
+                <input id="enterbookname" type="text" name="bookname" size="40"/>
+            <br/>
+
             <label for="enterbooktitle">Enter Book Title</label><br/>
             <input id="enterbooktitle" type="text" name="booktitle" size="40"/>
             <br/>
@@ -188,8 +188,6 @@
             <br/>
 
 
-
-
             <br/>
             <br/>
             <br/>
@@ -202,11 +200,11 @@
 
         </form>
 
-        <table style="word-wrap: break-word"  border="7">
+        <table style="word-wrap: break-word" border="7">
             <tr>
                 <th>Author</th>
                 <th>Book Name</th>
-                <th>Genre</th>
+                <th>Book Genre</th>
                 <th>Book Title</th>
                 <th>Book Pages</th>
                 <th>Book Price</th>
@@ -232,8 +230,7 @@
     <br/>
     <div style="height: 200px; width: 120px; border: 3px dashed #e03c32; float: left">
         <p>
-            <strong><a href="/">Add New Book</a></strong> <br/>
-            <strong><a href="/bookList">Book List</a></strong> <br/>
+            <strong><a href="/">Menu</a></strong> <br/>
 
         </p>
     </div>

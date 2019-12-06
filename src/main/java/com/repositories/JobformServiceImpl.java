@@ -48,4 +48,6 @@ public class JobformServiceImpl implements JobformService {
         System.out.println("impl get statistics");
         return jobformRepository.getStatistics();
     }
+
+
 }

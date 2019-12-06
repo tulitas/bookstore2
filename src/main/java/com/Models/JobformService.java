@@ -17,4 +17,6 @@ public interface JobformService {
     List<JobForm> getAllById(String id);
 
     String getStatistics();
+
+
 }

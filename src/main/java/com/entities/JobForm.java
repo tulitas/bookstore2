@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -16,8 +17,10 @@ public class JobForm {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
 
+
     @Column(name = "bookauthor")
     private String bookauthor;
+
 
     @Column(name = "bookname")
     private String bookname;
