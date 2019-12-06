@@ -41,16 +41,13 @@ public class OptionsController {
         if (bindingResult.hasErrors()) {
             return "/optons";
         } else jobformService.addJobForm(jobForm);
-        System.out.println("validation");
         return "redirect:/options";
     }
 
     @RequestMapping(value = "/options")
     public String getAllById( Model model, String id) {
-        System.out.println("CONTR get all by work date");
         List<JobForm> jobForms = jobformService.getAllById(id);
         model.addAttribute("optionsList", jobForms);
-        System.out.println(id);
         return "/addNewBook";
     }
 
